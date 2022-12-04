@@ -4,7 +4,6 @@ import {
 	useLazyGetUserReposQuery,
 	useSearchUsersQuery
 } from '../store/github/github.api';
-import { Link } from 'react-router-dom';
 import RepoCard from '../components/RepoCard';
 
 function Home() {
@@ -54,11 +53,13 @@ function Home() {
 					</ul>
 				)}
 				{areReposLoading && <p>Загрузка репозиториев...</p>}
-				<div className='min-h-[300px] max-h-[500px] overflow-y-scroll'>
-					{repos?.map(repo => (
-						<RepoCard repo={repo} key={repo.id} />
-					))}
-				</div>
+				{!dropDown && (
+					<div className='min-h-[300px] max-h-[500px] overflow-y-scroll'>
+						{repos?.map(repo => (
+							<RepoCard repo={repo} key={repo.id} />
+						))}
+					</div>
+				)}
 			</div>
 		</div>
 	);
