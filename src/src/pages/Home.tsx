@@ -32,7 +32,7 @@ function Home() {
 			{isError && (
 				<p className='text-center text-red-600'>Something went wrong...</p>
 			)}
-			<div className='relative w-[560px] h-full'>
+			<div className='relative w-[560px] h-screen'>
 				<input
 					type='text'
 					className='border border-slate-500  rounded-2xl py-2 px-4 w-full h=[42px] mb-2'
