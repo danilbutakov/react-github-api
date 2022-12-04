@@ -6,7 +6,7 @@ import Home from './src/pages/Home';
 
 function App() {
 	return (
-		<div className='w-screen h-screen'>
+		<div className='w-full h-full'>
 			<Header />
 			<Routes>
 				<Route path='/' element={<Home />} />
