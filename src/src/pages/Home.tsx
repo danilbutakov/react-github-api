@@ -28,7 +28,7 @@ function Home() {
 	};
 
 	return (
-		<div className='flex justify-center pt-10 px-5 mx-auto w-screen h-screen'>
+		<div className='flex justify-center pt-10 px-5 mx-auto w-full h-full'>
 			{isError && (
 				<p className='text-center text-red-600'>Something went wrong...</p>
 			)}
