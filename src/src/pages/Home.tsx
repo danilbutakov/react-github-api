@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import RepoCard from '../components/RepoCard';
 
 function Home() {
-	const [search, setSearch] = useState('danilbutakov');
+	const [search, setSearch] = useState('');
 	const [dropDown, setDropDown] = useState(false);
 	const debounced = useDebounce(search);
 	const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
