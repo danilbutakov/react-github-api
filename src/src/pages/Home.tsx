@@ -40,7 +40,7 @@ function Home() {
 					onChange={e => setSearch(e.target.value)}
 				/>
 				{dropDown && (
-					<ul className='list-none absolute top-[70px] left-0 right-0 max-h-500 overflow-y-scroll bg-slate-900 shadow-md text-gray-500 rounded-md p-4'>
+					<ul className='list-none absolute top-[70px] left-0 right-0 max-h-[500px] overflow-y-scroll bg-slate-900 shadow-md text-gray-500 rounded-md p-4'>
 						{isLoading && <p className='text-center'>Загрузка...</p>}
 						{data?.map(user => (
 							<li
@@ -53,8 +53,8 @@ function Home() {
 					</ul>
 				)}
 				{areReposLoading && <p>Загрузка репозиториев...</p>}
-				{!dropDown && data && (
-					<div className='min-h-[300px] max-h-500 overflow-y-scroll'>
+				{dropDown === false && (
+					<div className='max-h-[500px] overflow-y-scroll'>
 						{repos?.map(repo => (
 							<RepoCard repo={repo} key={repo.id} />
 						))}
