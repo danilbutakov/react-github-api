@@ -32,7 +32,7 @@ function Home() {
 			{isError && (
 				<p className='text-center text-red-600'>Something went wrong...</p>
 			)}
-			<div className='relative w-[560px] h-screen'>
+			<div className='relative w-[560px] h-full'>
 				<input
 					type='text'
 					className='border border-slate-500  rounded-2xl py-2 px-4 w-full h=[42px] mb-2'
@@ -54,7 +54,7 @@ function Home() {
 					</ul>
 				)}
 				{areReposLoading && <p>Загрузка репозиториев...</p>}
-				<div className='max-h-[300px] overflow-y-scroll'>
+				<div className='min-h-[300px] max-h-[500px] overflow-y-scroll'>
 					{repos?.map(repo => (
 						<RepoCard repo={repo} key={repo.id} />
 					))}

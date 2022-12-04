@@ -6,13 +6,13 @@ import Home from './src/pages/Home';
 
 function App() {
 	return (
-		<>
+		<div className='w-screen h-screen'>
 			<Header />
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/favorites' element={<Favorites />} />
 			</Routes>
-		</>
+		</div>
 	);
 }
 

@@ -6,7 +6,7 @@ function Favorites() {
 
 	if (favorites.length === 0)
 		return (
-			<div className='flex justify-center mt-5 text-white '>
+			<div className='flex justify-center mt-5 text-white w-full h-full'>
 				<p className='mx-auto bg-rose-300 p-5 text-[20px] rounded-3xl'>
 					{'В избранном пусто :('}
 				</p>
@@ -15,7 +15,7 @@ function Favorites() {
 
 	return (
 		<>
-			<h2 className='text-black flex justify-center mt-5 font-semibold text-[20px]'>
+			<h2 className='text-black flex justify-center mt-5 font-semibold text-[20px] w-full h-full'>
 				Избранное
 			</h2>
 			<div className='flex w-auto justify-center pt-5 mx-auto w-screen'>
